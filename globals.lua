@@ -8,6 +8,8 @@ g_LibState = {
   [0] = "registered",
   [1] = "utilized"
 }
+g_Plugin = {}
+g_LDHSent = {}
 
 
 cDependent = dofile(cPluginManager:GetCurrentPlugin():GetLocalFolder() .. "/class/cDependent.lua")
