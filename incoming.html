@@ -1,0 +1,269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>Reference</title>
+    <link rel="stylesheet" href="ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>ldoc</h1>
+
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>incoming</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>incoming</code></h1>
+<p>Functions within LDH that your plugin will call, generally relating to registration.</p>
+<p>
+ Some only apply to Dependents, some only apply to Libraries.
+ However, one plugin can be both a Dependent and a Library, so choose functions to use accordingly.</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#RegisterDependent">RegisterDependent (a_plugin, ...)</a></td>
+	<td class="summary">Register your plugin as a Dependent.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#UnregisterDependent">UnregisterDependent (a_plugin)</a></td>
+	<td class="summary">Unregister your plugin as a Dependent.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#AddLibs">AddLibs (a_plugin, ...)</a></td>
+	<td class="summary">Add required Libraries to your list (Dependent only).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RemLibs">RemLibs (a_plugin, ...)</a></td>
+	<td class="summary">Remove required Libraries to your list (Dependent Only).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#RegisterLibrary">RegisterLibrary (a_plugin)</a></td>
+	<td class="summary">Register your plugin as a Library.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#UnregisterLibrary">UnregisterLibrary (a_plugin)</a></td>
+	<td class="summary">Register your plugin as a Library.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "RegisterDependent"></a>
+    <strong>RegisterDependent (a_plugin, ...)</strong>
+    </dt>
+    <dd>
+    Register your plugin as a Dependent.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a_plugin</span>
+         Plugin name (string)
+        </li>
+        <li><span class="parameter">...</span>
+         as many library plugin names as you want (string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        true if successful</li>
+        <li>
+        false and error message if failure.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "UnregisterDependent"></a>
+    <strong>UnregisterDependent (a_plugin)</strong>
+    </dt>
+    <dd>
+    Unregister your plugin as a Dependent.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a_plugin</span>
+         Plugin name (string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        true if successful</li>
+        <li>
+        false and error message if failure.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "AddLibs"></a>
+    <strong>AddLibs (a_plugin, ...)</strong>
+    </dt>
+    <dd>
+    Add required Libraries to your list (Dependent only).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a_plugin</span>
+         Plugin name (string)
+        </li>
+        <li><span class="parameter">...</span>
+         as many library plugin names as you want (string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        true if successful</li>
+        <li>
+        false and error message if failure.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RemLibs"></a>
+    <strong>RemLibs (a_plugin, ...)</strong>
+    </dt>
+    <dd>
+    Remove required Libraries to your list (Dependent Only).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a_plugin</span>
+         Plugin name (string)
+        </li>
+        <li><span class="parameter">...</span>
+         as many library plugin names as you want (string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        true if successful</li>
+        <li>
+        false and error message if failure.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "RegisterLibrary"></a>
+    <strong>RegisterLibrary (a_plugin)</strong>
+    </dt>
+    <dd>
+    Register your plugin as a Library.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a_plugin</span>
+         Plugin name (string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        true if successful</li>
+        <li>
+        false and error message if failure.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "UnregisterLibrary"></a>
+    <strong>UnregisterLibrary (a_plugin)</strong>
+    </dt>
+    <dd>
+    Register your plugin as a Library.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">a_plugin</span>
+         Plugin name (string)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+        true if successful</li>
+        <li>
+        false and error message if failure.</li>
+    </ol>
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2016-08-15 15:51:26 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
