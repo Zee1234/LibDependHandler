@@ -11,6 +11,12 @@ function LDHDisable() end
 --@return true
 function LDHVerify() end
 
+--- Allows LDH to notify your plugin that it has turned on in case it is not loaded at the normal time.
+-- Both.
+--@param plugin_name (string)
+--@return nil
+function LDHSetup(plugin_name) end
+
 --- Notify your plugin of a library plugin "turning on".
 -- Dependents only.
 --@param plugin_name (string)
