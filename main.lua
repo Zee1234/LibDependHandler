@@ -32,6 +32,13 @@ end
 
 function LDHBroadcast()
   if LDHSent then return; end
-  cPluginManager:ForEachPlugin(function(a_plugin) cPluginManager:CallPlugin(a_plugin:GetName(),"LDHSetup") end)
+  LOG("Errors of this format:")
+  LOG("Error in plugin ________: Could not find function LDHSetup()")
+  LOG("Function 'LDHSetup' not found")
+  LOG("are intended.")
+  LOG("Do not report them to the plugin dev, you will be laughed at.")
+  LOG("You have been warned.")
+  cPluginManager:ForEachPlugin(function(a_plugin) if a_plugin:GetName() == "LibDependHandler" then return; end cPluginManager:CallPlugin(a_plugin:GetName(),"LDHSetup") end)
   LDHSent = true
+  LOG("Any errors of that format after this point may be and likely are actual errors!")
 end
